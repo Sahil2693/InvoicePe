@@ -145,6 +145,14 @@ h1, h2, h3, h4 {
   align-items: start;
 }
 
+/* Allow grid columns to shrink below their content's intrinsic min-width.
+   Without this, a wide child (e.g. the items table's min-width) forces the
+   whole column — and the page — wider than the viewport on mobile. */
+.form-column,
+.preview-column {
+  min-width: 0;
+}
+
 /* ---------- Cards ---------- */
 .card {
   background: var(--surface);
@@ -757,6 +765,7 @@ h1, h2, h3, h4 {
 
   .ip-totals {
     width: 100%;
+    min-width: 0;
   }
 
   /* Larger touch targets — min 44px height, 16px font avoids iOS zoom */
