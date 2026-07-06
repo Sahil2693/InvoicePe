@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>Free GST Invoice Generator for Freelancers | InvoicePe</title>
+  <meta name="description" content="Free GST invoice generator for freelancers. Create professional invoices in seconds — no signup, no watermarks, instant PDF download.">
+  <meta name="keywords" content="GST invoice generator, free invoice generator, freelancer invoice, invoice maker, India invoice, PDF invoice">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://invoicepe.example.com/">
+
+  <!-- Open Graph / social sharing (WhatsApp, Facebook, LinkedIn, etc.) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Free GST Invoice Generator for Freelancers | InvoicePe">
+  <meta property="og:description" content="Free GST invoice generator for freelancers. Create professional invoices in seconds — no signup, no watermarks, instant PDF download.">
+  <meta property="og:url" content="https://invoicepe.example.com/">
+  <meta name="theme-color" content="#2C3E91">
+
+  <!-- Twitter / X card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Free GST Invoice Generator for Freelancers | InvoicePe">
+  <meta name="twitter:description" content="Free GST invoice generator for freelancers. Create professional invoices in seconds — no signup, instant PDF download.">
+
+  <!-- Favicon (inline SVG placeholder) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%232C3E91'/%3E%3Ctext x='50' y='72' font-size='60' text-anchor='middle' fill='white' font-family='Arial'%3E%E2%82%B9%3C/text%3E%3C/svg%3E">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ===== Navbar ===== -->
+  <header class="navbar">
+    <div class="navbar__inner">
+      <div class="brand">
+        <span class="brand__logo" aria-hidden="true">🧾</span>
+        <span class="brand__name">InvoicePe</span>
+        <span class="brand__tagline">Free GST Invoice Generator</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="hero__inner">
+      <h1 class="hero__title">Create Professional Invoices in Seconds — Free</h1>
+      <p class="hero__subtitle">
+        No signup, no watermarks, GST-ready. Fill in the details, watch the live preview, and download a print-perfect PDF.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== Main App ===== -->
+  <main class="app">
+    <div class="app__grid">
+
+      <!-- ===== LEFT: Input Form ===== -->
+      <section class="form-column" aria-label="Invoice input form">
+        <form id="invoice-form" class="invoice-form" autocomplete="off">
+
+          <!-- a) Your Details -->
+          <section class="card">
+            <h2 class="card__title"><span class="card__icon" aria-hidden="true">👤</span> Your Details</h2>
+            <div class="field-grid">
+              <label class="field">
+                <span class="field__label">Business / Your Name</span>
+                <input type="text" id="biz-name" name="biz-name" placeholder="Acme Design Studio">
+              </label>
+              <label class="field">
+                <span class="field__label">Email</span>
+                <input type="email" id="biz-email" name="biz-email" placeholder="you@example.com">
+              </label>
+              <label class="field">
+                <span class="field__label">Phone</span>
+                <input type="tel" id="biz-phone" name="biz-phone" placeholder="+91 98765 43210">
+              </label>
+              <label class="field field--full">
+                <span class="field__label">Address</span>
+                <textarea id="biz-address" name="biz-address" rows="2" placeholder="Street, City, State, PIN"></textarea>
+              </label>
+              <label class="field field--full">
+                <span class="field__label">UPI ID / Bank Details</span>
+                <textarea id="biz-payment" name="biz-payment" rows="2" placeholder="yourname@upi&#10;A/C: 1234567890, IFSC: ABCD0001234"></textarea>
+              </label>
+            </div>
+          </section>
+
+          <!-- b) Bill To -->
+          <section class="card">
+            <h2 class="card__title"><span class="card__icon" aria-hidden="true">🏢</span> Bill To</h2>
+            <div class="field-grid">
+              <label class="field">
+                <span class="field__label">Client Name</span>
+                <input type="text" id="client-name" name="client-name" placeholder="Client Pvt. Ltd.">
+              </label>
+              <label class="field">
+                <span class="field__label">Client Email</span>
+                <input type="email" id="client-email" name="client-email" placeholder="client@example.com">
+              </label>
+              <label class="field field--full">
+                <span class="field__label">Client Address</span>
+                <textarea id="client-address" name="client-address" rows="2" placeholder="Street, City, State, PIN"></textarea>
+              </label>
+            </div>
+          </section>
+
+          <!-- c) Invoice Info -->
+          <section class="card">
+            <h2 class="card__title"><span class="card__icon" aria-hidden="true">📄</span> Invoice Info</h2>
+            <div class="field-grid">
+              <label class="field">
+                <span class="field__label">Invoice Number</span>
+                <input type="text" id="invoice-number" name="invoice-number" placeholder="INV-0001">
+              </label>
+              <label class="field">
+                <span class="field__label">Invoice Date</span>
+                <input type="date" id="invoice-date" name="invoice-date">
+              </label>
+              <label class="field">
+                <span class="field__label">Due Date</span>
+                <input type="date" id="due-date" name="due-date">
+              </label>
+              <label class="field">
+                <span class="field__label">Currency</span>
+                <select id="currency" name="currency">
+                  <option value="INR">INR (₹)</option>
+                  <option value="USD">USD ($)</option>
+                  <option value="EUR">EUR (€)</option>
+                  <option value="GBP">GBP (£)</option>
+                  <option value="AED">AED (د.إ)</option>
+                </select>
+              </label>
+            </div>
+          </section>
+
+          <!-- d) Items -->
+          <section class="card">
+            <h2 class="card__title"><span class="card__icon" aria-hidden="true">📦</span> Items</h2>
+            <div class="items-wrap">
+              <table class="items-table">
+                <thead>
+                  <tr>
+                    <th class="col-desc">Description</th>
+                    <th class="col-qty">Qty</th>
+                    <th class="col-rate">Rate</th>
+                    <th class="col-amount">Amount</th>
+                    <th class="col-action" aria-label="Actions"></th>
+                  </tr>
+                </thead>
+                <tbody id="items-body">
+                  <!-- Item rows injected by script.js -->
+                </tbody>
+              </table>
+            </div>
+            <button type="button" id="add-item" class="btn btn--ghost">+ Add Item</button>
+          </section>
+
+          <!-- e) Tax -->
+          <section class="card">
+            <h2 class="card__title"><span class="card__icon" aria-hidden="true">%</span> Tax</h2>
+            <div class="field-grid">
+              <label class="field">
+                <span class="field__label">GST %</span>
+                <input type="number" id="gst-rate" name="gst-rate" min="0" max="100" step="0.01" value="0">
+              </label>
+            </div>
+          </section>
+
+        </form>
+      </section>
+
+      <!-- ===== RIGHT: Live Preview ===== -->
+      <section class="preview-column" aria-label="Invoice preview">
+        <!-- Sidebar ad slot (reserved) -->
+        <div id="ad-slot-sidebar" class="ad-slot ad-slot--sidebar" aria-hidden="true"></div>
+
+        <div class="preview-sticky">
+          <article id="invoice-preview" class="invoice-paper">
+
+            <header class="ip-header">
+              <div class="ip-from">
+                <h3 id="pv-biz-name" class="ip-biz-name">Your Business Name</h3>
+                <p id="pv-biz-address" class="ip-line"></p>
+                <p id="pv-biz-contact" class="ip-line"></p>
+              </div>
+              <div class="ip-title-block">
+                <h2 class="ip-invoice-title">INVOICE</h2>
+                <p class="ip-meta"><span>Invoice #</span> <strong id="pv-invoice-number">—</strong></p>
+                <p class="ip-meta"><span>Date</span> <strong id="pv-invoice-date">—</strong></p>
+                <p class="ip-meta"><span>Due</span> <strong id="pv-due-date">—</strong></p>
+              </div>
+            </header>
+
+            <section class="ip-billto">
+              <h4 class="ip-section-label">Bill To</h4>
+              <p id="pv-client-name" class="ip-client-name">Client Name</p>
+              <p id="pv-client-email" class="ip-line"></p>
+              <p id="pv-client-address" class="ip-line"></p>
+            </section>
+
+            <table class="ip-items">
+              <thead>
+                <tr>
+                  <th class="ip-col-desc">Description</th>
+                  <th class="ip-col-qty">Qty</th>
+                  <th class="ip-col-rate">Rate</th>
+                  <th class="ip-col-amount">Amount</th>
+                </tr>
+              </thead>
+              <tbody id="pv-items-body">
+                <!-- Preview item rows injected by script.js -->
+              </tbody>
+            </table>
+
+            <section class="ip-totals">
+              <div class="ip-total-row">
+                <span>Subtotal</span>
+                <span id="pv-subtotal">₹0.00</span>
+              </div>
+              <div class="ip-total-row">
+                <span id="pv-tax-label">Tax (GST 0%)</span>
+                <span id="pv-tax-amount">₹0.00</span>
+              </div>
+              <div class="ip-total-row ip-total-row--grand">
+                <span>Grand Total</span>
+                <span id="pv-grand-total">₹0.00</span>
+              </div>
+            </section>
+
+            <footer class="ip-footer">
+              <h4 class="ip-section-label">Payment Details</h4>
+              <p id="pv-biz-payment" class="ip-line"></p>
+              <p class="ip-thanks">Thank you for your business!</p>
+            </footer>
+
+          </article>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ===== Generate PDF ===== -->
+    <div class="action-bar">
+      <button type="button" id="generate-pdf" class="btn btn--primary btn--large">Generate PDF</button>
+      <p id="pdf-error" class="form-error" role="alert" hidden></p>
+    </div>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div id="ad-slot-footer" class="ad-slot ad-slot--footer" aria-hidden="true"></div>
+    <p class="site-footer__text">
+      Made by Sahil Kamti — a free tool for freelancers to create professional invoices in seconds.
+    </p>
+    <p class="site-footer__text">
+      <a href="mailto:sahilkamti26@gmail.com">sahilkamti26@gmail.com</a>
+      &nbsp;·&nbsp;
+      <a href="privacy.html">Privacy Policy</a>
+    </p>
+    <p class="site-footer__text">© <span id="footer-year"></span> Sahil Kamti</p>
+  </footer>
+
+  <!-- jsPDF (PDF generation) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
